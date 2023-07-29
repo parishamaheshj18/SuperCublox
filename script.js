@@ -109,14 +109,14 @@ touchManager.on('swipeleft', () => {
     keyboard['ArrowLeft'] = true;
     setTimeout(() => {
         keyboard['ArrowLeft'] = false;
-    }, 100); // Adjust the duration of the key press as needed
+    }, 50); // Adjust the duration of the key press as needed
 });
 
 touchManager.on('swiperight', () => {
     keyboard['ArrowRight'] = true;
     setTimeout(() => {
         keyboard['ArrowRight'] = false;
-    }, 100); // Adjust the duration of the key press as needed
+    }, 50); // Adjust the duration of the key press as needed
 });
 
 // Swipe up (for jump)
@@ -127,7 +127,7 @@ touchManager.on('tap', () => {
     keyboard['ArrowUp'] = true;
     setTimeout(() => {
         keyboard['ArrowUp'] = false;
-    }, 100); // Adjust the duration of the key press as needed
+    }, 50); // Adjust the duration of the key press as needed
 });
 
 // Physics update
