@@ -85,15 +85,9 @@ let jumpForce = 0;
 let isGrounded = false;
 
 // Keyboard input
-const keyboard = {};
+// ...
 
-document.addEventListener('keydown', (event) => {
-    keyboard[event.code] = true;
-});
 
-document.addEventListener('keyup', (event) => {
-    keyboard[event.code] = false;
-});
 
 // Physics update
 function updatePhysics() {

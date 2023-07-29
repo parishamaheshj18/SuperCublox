@@ -86,7 +86,7 @@ let jumpForce = 0;
 // Check if the character is on the ground
 let isGrounded = false;
 
-// Keyboard input
+// Keyboard input (for arrow keys)
 const keyboard = {};
 
 document.addEventListener('keydown', (event) => {
@@ -95,6 +95,39 @@ document.addEventListener('keydown', (event) => {
 
 document.addEventListener('keyup', (event) => {
     keyboard[event.code] = false;
+});
+
+// Touch input (for swipe gestures)
+const touchArea = document.body;
+const touchManager = new Hammer.Manager(touchArea);
+
+// Swipe left and right
+const swipe = new Hammer.Swipe();
+touchManager.add(swipe);
+
+touchManager.on('swipeleft', () => {
+    keyboard['ArrowLeft'] = true;
+    setTimeout(() => {
+        keyboard['ArrowLeft'] = false;
+    }, 100); // Adjust the duration of the key press as needed
+});
+
+touchManager.on('swiperight', () => {
+    keyboard['ArrowRight'] = true;
+    setTimeout(() => {
+        keyboard['ArrowRight'] = false;
+    }, 100); // Adjust the duration of the key press as needed
+});
+
+// Swipe up (for jump)
+const tap = new Hammer.Tap();
+touchManager.add(tap);
+
+touchManager.on('tap', () => {
+    keyboard['ArrowUp'] = true;
+    setTimeout(() => {
+        keyboard['ArrowUp'] = false;
+    }, 100); // Adjust the duration of the key press as needed
 });
 
 // Physics update
