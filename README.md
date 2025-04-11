@@ -5,7 +5,7 @@
 
 A dynamic 3D obstacle-dodging game built with Three.js, featuring physics-based movement and shadow effects. Control a cube character to avoid falling obstacles!
 
-![Gameplay Screenshot](<img width="910" alt="Screenshot 2025-04-10 at 21 12 41" src="https://github.com/user-attachments/assets/73b04d4a-f5ff-4730-9353-0f6463709ebf" />) 
+![Gameplay Screenshot](https://github.com/parishamaheshj18/SuperCublox/blob/main/Screenshot%202025-04-10%20at%2021.14.06.png) 
 
 ## 🚀 Technical Highlights
 - **Three.js-powered 3D engine** with smooth rendering (60fps)
